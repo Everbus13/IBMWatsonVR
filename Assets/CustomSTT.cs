@@ -17,7 +17,8 @@ public class CustomSTT : MonoBehaviour {
     SpeechToText speechToText = new SpeechToText(credentials);
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         //Get Resource
         string resourcePath = Application.dataPath + "/sound/1.mp3";
         byte[] resource = File.ReadAllBytes(resourcePath);
@@ -41,7 +42,8 @@ public class CustomSTT : MonoBehaviour {
         throw new NotImplementedException();
     }
 
-    private void HandleOnRecognize(SpeechRecognitionEvent response, Dictionary<string, object> customData){
+    private void HandleOnRecognize(SpeechRecognitionEvent response, Dictionary<string, object> customData)
+    {
         //Print Response
         Debug.Log(customData["json"].ToString(), gameObject);
         Debug.Log("Done", gameObject);
