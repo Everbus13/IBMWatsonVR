@@ -9,7 +9,7 @@ using IBM.Watson.DeveloperCloud.Connection;
 using IBM.Watson.DeveloperCloud.Logging;
 
 public class CustomSTT : MonoBehaviour {
-        //SpeechToText Authentication
+    //SpeechToText Authentication
     private static string _username = "95c2bcf5-dab1-47c1-85e7-f5a4b7395bb7";
     private static string _password = "HMqvmaWwWdLx";
     private static string _serviceUrl = "https://stream.watsonplatform.net/speech-to-text/api";
