@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 1304411125}
   - component: {fileID: 1304411124}
   m_Layer: 0
-  m_Name: CustomSpeechToText
+  m_Name: CustomSTT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

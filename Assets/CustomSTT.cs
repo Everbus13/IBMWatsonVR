@@ -9,12 +9,7 @@ using IBM.Watson.DeveloperCloud.Connection;
 using IBM.Watson.DeveloperCloud.Logging;
 
 public class CustomSTT : MonoBehaviour {
-    //Get Resource
-    static string resourcePath = "C:\\temp\\1.mp3";
-    byte[] resource = File.ReadAllBytes(resourcePath);
-    string resourceType = Utility.GetMimeType(Path.GetExtension(resourcePath));
-
-    //SpeechToText Authentication
+        //SpeechToText Authentication
     private static string _username = "95c2bcf5-dab1-47c1-85e7-f5a4b7395bb7";
     private static string _password = "HMqvmaWwWdLx";
     private static string _serviceUrl = "https://stream.watsonplatform.net/speech-to-text/api";
@@ -23,6 +18,12 @@ public class CustomSTT : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        //Get Resource
+        string resourcePath = Application.dataPath + "/sound/1.mp3";
+        byte[] resource = File.ReadAllBytes(resourcePath);
+        string resourceType = Utility.GetMimeType(Path.GetExtension(resourcePath));
+
+        //Create keyword list
         List<string> keywords = new List<string>();
         keywords.Add("speech");
         speechToText.KeywordsThreshold = 0.5f;
