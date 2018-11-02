@@ -148,13 +148,17 @@ public class ExampleSpeechToText : MonoBehaviour
 
     private IEnumerator Examples()
     {
-        Runnable.Run(DownloadAcousticResource());
-        while (!_isAudioLoaded)
-            yield return null;
+        //COMMENTED CODE
+        //Runnable.Run(DownloadAcousticResource());
+        //while (!_isAudioLoaded)
+        //    yield return null;
 
-        Runnable.Run(DownloadOggResource());
-        while (!_isOggLoaded)
-            yield return null;
+        //Runnable.Run(DownloadOggResource());
+        //while (!_isOggLoaded)
+        //    yield return null;
+
+        string dirPath = Application.dataPath;
+        _acousticResourceData = File.ReadAllBytes("C:\\temp\\1.mp3");
 
         //  Recognize
         Log.Debug("ExampleSpeechToText.Examples()", "Attempting to recognize");
@@ -443,6 +447,8 @@ public class ExampleSpeechToText : MonoBehaviour
             yield return null;
 
         Log.Debug("ExampleSpeechToText.Examples()", "Speech to Text examples complete.");
+
+        
     }
 
     private void DeleteAcousticResource()
